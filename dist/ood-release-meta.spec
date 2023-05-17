@@ -20,6 +20,7 @@ Requires:       ood-course-jupyter = 1
 Requires:       ood-csc-status = 1
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 1
+Requires:       ood-julia-jupyter = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 1
 Requires:       ood-quota-generator = 1
