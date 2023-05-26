@@ -12,22 +12,22 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 1
-Requires:       ood-initializers = 1
+Requires:       ood-util
+Requires:       ood-initializers
 
-Requires:       ood-base-jupyter = 1
-Requires:       ood-course-jupyter = 1
-Requires:       ood-csc-status = 1
-Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 1
-Requires:       ood-julia-jupyter = 1
-Requires:       ood-lustre-quota = 1
-Requires:       ood-persistent-ssh = 1
-Requires:       ood-quota-generator = 1
-Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 1
-Requires:       ood-vnc-util = 1
-Requires:       ood-vscode = 1
+Requires:       ood-base-jupyter
+Requires:       ood-course-jupyter
+Requires:       ood-csc-status
+Requires:       ood-disk-quotas
+Requires:       ood-html
+Requires:       ood-julia-jupyter
+Requires:       ood-lustre-quota
+Requires:       ood-persistent-ssh
+Requires:       ood-quota-generator
+Requires:       ood-shell
+Requires:       ood-tensorboard
+Requires:       ood-vnc-util
+Requires:       ood-vscode
 
 # Disable debuginfo
 %global debug_package %{nil}
