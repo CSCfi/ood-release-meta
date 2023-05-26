@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,21 +13,21 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 1
-Requires:       ood-initializers = 1
+Requires:       ood-initializers = 2
 
-Requires:       ood-base-jupyter = 1
-Requires:       ood-course-jupyter = 1
+Requires:       ood-base-jupyter = 2
+Requires:       ood-course-jupyter = 2
 Requires:       ood-csc-status = 1
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 1
-Requires:       ood-julia-jupyter = 1
+Requires:       ood-html = 2
+Requires:       ood-julia-jupyter = 2
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 1
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 1
-Requires:       ood-vnc-util = 1
-Requires:       ood-vscode = 1
+Requires:       ood-tensorboard = 2
+Requires:       ood-vnc-util = 2
+Requires:       ood-vscode = 2
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -50,5 +50,14 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 26 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Remove test partition from apps.
+- Update code-server version.
+- Add Julia extension to VSCode.
+- Add Julia dashboard icon.
+- Add negative BU warnings.
+- Validate Rclone remotes.
+- Improve welcome page.
+
 * Tue May 16 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Initial version
