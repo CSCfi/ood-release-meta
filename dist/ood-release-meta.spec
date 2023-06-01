@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,14 +12,14 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 1
-Requires:       ood-initializers = 2
+Requires:       ood-util = 2
+Requires:       ood-initializers = 3
 
 Requires:       ood-base-jupyter = 2
 Requires:       ood-course-jupyter = 2
 Requires:       ood-csc-status = 1
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 2
+Requires:       ood-html = 3
 Requires:       ood-julia-jupyter = 2
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 1
@@ -50,6 +50,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Jun 1 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Improve form validation.
+- Remove develop dropdown.
+- Adjust pinned apps.
+- Add RPM versions page.
+- Fix welcome page error pages.
+
 * Fri May 26 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Remove test partition from apps.
 - Update code-server version.
