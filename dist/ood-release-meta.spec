@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,14 +12,14 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 1
-Requires:       ood-initializers = 1
+Requires:       ood-util
+Requires:       ood-initializers
 
-Requires:       ood-base-jupyter = 1
-Requires:       ood-html = 2
-Requires:       ood-julia-jupyter = 1
-Requires:       ood-lustre-quota = 1
-Requires:       ood-shell = 1
+Requires:       ood-base-jupyter
+Requires:       ood-html
+Requires:       ood-julia-jupyter
+Requires:       ood-lustre-quota
+Requires:       ood-shell
 
 # Disable debuginfo
 %global debug_package %{nil}
