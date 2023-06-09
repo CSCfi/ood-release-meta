@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 2
-Requires:       ood-initializers = 4
+Requires:       ood-initializers = 5
 
 Requires:       ood-base-jupyter = 2
 Requires:       ood-course-jupyter = 2
@@ -50,6 +50,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Jun 9 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Mask sensitive files app paths (remotes).
+- Fix dashboard modal scrolling bug.
+
 * Thu Jun 8 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Add accessibility statement and cookie policy modals to dashboard.
 - Initialize ood-csc-status nginx config during install.
