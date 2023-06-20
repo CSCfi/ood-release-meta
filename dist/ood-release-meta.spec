@@ -21,6 +21,7 @@ Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
 Requires:       ood-shell
+Requires:       ood-vscode
 
 # Disable debuginfo
 %global debug_package %{nil}
