@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
