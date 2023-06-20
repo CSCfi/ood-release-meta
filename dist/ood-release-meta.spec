@@ -16,6 +16,7 @@ Requires:       ood-util
 Requires:       ood-initializers
 
 Requires:       ood-base-jupyter
+Requires:       ood-course-jupyter
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
