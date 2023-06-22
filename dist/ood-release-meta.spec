@@ -20,6 +20,7 @@ Requires:       ood-course-jupyter
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
+Requires:       ood-persistent-ssh
 Requires:       ood-shell
 Requires:       ood-vnc-util
 Requires:       ood-vscode
