@@ -22,6 +22,7 @@ Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
 Requires:       ood-persistent-ssh
 Requires:       ood-shell
+Requires:       ood-tensorboard
 Requires:       ood-vnc-util
 Requires:       ood-vscode
 
