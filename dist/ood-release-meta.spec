@@ -23,6 +23,7 @@ Requires:       ood-disk-quotas
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
+Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
 Requires:       ood-shell
