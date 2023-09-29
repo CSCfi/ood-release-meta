@@ -15,6 +15,7 @@ Requires:       ondemand
 Requires:       ood-util
 Requires:       ood-initializers
 
+Requires:       ood-allas-conf
 Requires:       ood-base-jupyter
 Requires:       ood-cloud-storage-conf
 Requires:       ood-course-jupyter
