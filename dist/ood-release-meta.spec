@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -17,7 +17,7 @@ Requires:       ood-initializers = 1
 
 Requires:       ood-base-jupyter = 1
 Requires:       ood-course-jupyter = 1
-Requires:       ood-html = 2
+Requires:       ood-html = 3
 Requires:       ood-julia-jupyter = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 2
@@ -47,6 +47,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Oct 5 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Add welcome page logos
+
 * Thu Oct 5 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Fixed compute node shell
 
