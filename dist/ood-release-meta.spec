@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        1
-Release:        5%{?dist}
+Version:        2
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,22 +12,25 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 2
-Requires:       ood-initializers = 5
+Requires:       ood-util = 3
+Requires:       ood-initializers = 6
 
-Requires:       ood-base-jupyter = 2
-Requires:       ood-course-jupyter = 2
-Requires:       ood-csc-status = 2
+Requires:       ood-allas-conf = 1
+Requires:       ood-base-jupyter = 3
+Requires:       ood-cloud-storage-conf = 1
+Requires:       ood-course-jupyter = 3
+Requires:       ood-csc-status = 3
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 3
-Requires:       ood-julia-jupyter = 2
+Requires:       ood-html = 4
+Requires:       ood-julia-jupyter = 3
 Requires:       ood-lustre-quota = 1
-Requires:       ood-persistent-ssh = 1
+Requires:       ood-mlflow = 1
+Requires:       ood-persistent-ssh = 2
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 2
-Requires:       ood-vnc-util = 2
-Requires:       ood-vscode = 2
+Requires:       ood-tensorboard = 3
+Requires:       ood-vnc-util = 3
+Requires:       ood-vscode = 3
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -50,6 +53,18 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Oct 9 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Add MLflow.
+- Add Allas configuration tool.
+- Desktop icons and configuration are now persistent.
+- Update VSCode to 1.82.2.
+- Fix Jupyter notebooks in VSCode.
+- Usage metrics are 3d instead of 6h.
+- Usage metrics now include a description.
+- Clarify SMT behaviour/core amount in app forms.
+- Invalid app form options are now highlighted (red text).
+- Fix ood-csc-status error on project names with ";".
+
 * Fri Jun 9 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Mask sensitive files app paths (remotes).
 - Fix dashboard modal scrolling bug.
