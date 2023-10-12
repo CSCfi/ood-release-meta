@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,10 +13,10 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 1
-Requires:       ood-initializers = 1
+Requires:       ood-initializers = 2
 
 Requires:       ood-base-jupyter = 1
-Requires:       ood-course-jupyter = 1
+Requires:       ood-course-jupyter = 2
 Requires:       ood-html = 3
 Requires:       ood-julia-jupyter = 1
 Requires:       ood-lustre-quota = 1
@@ -47,6 +47,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Oct 12 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Jupyter has been improved.
+- Login page improvements.
+
 * Thu Oct 5 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Add welcome page logos
 
