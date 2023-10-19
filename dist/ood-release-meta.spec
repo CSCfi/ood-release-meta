@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        1
+Version:        3
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -46,7 +46,7 @@ Open on Demand release meta package
 %install
 
 %__install -m 0755 -d %{buildroot}%{config_path}
-echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
+echo "%{version} (develop)" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 
 %files
 
