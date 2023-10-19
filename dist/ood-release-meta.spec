@@ -40,7 +40,7 @@ Open on Demand release meta package
 %install
 
 %__install -m 0755 -d %{buildroot}%{config_path}
-echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
+echo "%{version} (develop)" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 
 %files
 
