@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,12 +12,12 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 1
-Requires:       ood-initializers = 2
+Requires:       ood-util = 2
+Requires:       ood-initializers = 3
 
 Requires:       ood-base-jupyter = 2
 Requires:       ood-course-jupyter = 1
-Requires:       ood-html = 4
+Requires:       ood-html = 5
 Requires:       ood-julia-jupyter = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 2
@@ -47,6 +47,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 20 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Add Matomo IDs
+- Fix SlurmLimits error
+- Fix app card caching
+
 * Thu Oct 12 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Jupyter has been improved.
 - Login page improvements.
