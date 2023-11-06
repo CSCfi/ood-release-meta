@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,18 +13,18 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 2
-Requires:       ood-initializers = 3
+Requires:       ood-initializers = 4
 
-Requires:       ood-base-jupyter = 2
-Requires:       ood-course-jupyter = 1
-Requires:       ood-html = 5
-Requires:       ood-julia-jupyter = 1
+Requires:       ood-base-jupyter = 4
+Requires:       ood-course-jupyter = 2
+Requires:       ood-html = 6
+Requires:       ood-julia-jupyter = 2
 Requires:       ood-lustre-quota = 1
-Requires:       ood-persistent-ssh = 2
+Requires:       ood-persistent-ssh = 3
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 2
-Requires:       ood-vnc-util = 1
-Requires:       ood-vscode = 1
+Requires:       ood-tensorboard = 3
+Requires:       ood-vnc-util = 2
+Requires:       ood-vscode = 3
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -47,6 +47,18 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Nov 6 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Initial release build.
+- Fix docs links.
+- Add Julia-Jupyter and Active Jobs to pinned apps.
+- Fix dashboard title.
+- Remove classic Jupyter notebook.
+- Remove customer portal link.
+- Update VSCode to 1.83.1.
+- Fix Jupyter notebooks in VSCode.
+- Remove email on started options.
+- Add cray-python 3.10.10.
+
 * Fri Oct 20 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Add Matomo IDs
 - Fix SlurmLimits error
