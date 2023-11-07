@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -17,7 +17,7 @@ Requires:       ood-initializers = 4
 
 Requires:       ood-base-jupyter = 4
 Requires:       ood-course-jupyter = 2
-Requires:       ood-html = 6
+Requires:       ood-html = 7
 Requires:       ood-julia-jupyter = 2
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 3
@@ -47,6 +47,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Nov 6 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Add OIDC error page redirect
+
 * Mon Nov 6 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Initial release build.
 - Fix docs links.
