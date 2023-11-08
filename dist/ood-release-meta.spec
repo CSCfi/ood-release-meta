@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        9%{?dist}
+Release:        10%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,7 +12,7 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 2
+Requires:       ood-util = 3
 Requires:       ood-initializers = 4
 
 Requires:       ood-base-jupyter = 4
@@ -23,7 +23,7 @@ Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 3
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 3
-Requires:       ood-vnc-util = 2
+Requires:       ood-vnc-util = 3
 Requires:       ood-vscode = 3
 
 # Disable debuginfo
@@ -47,6 +47,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Nov 8 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Remove LUMI-D NVME option.
+- Remove VNC form settings header.
+
 * Mon Nov 6 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Add OIDC error page redirect
 
