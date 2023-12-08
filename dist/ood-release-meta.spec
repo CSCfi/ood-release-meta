@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        2
+Version:        3
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -12,25 +12,25 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 3
-Requires:       ood-initializers = 6
+Requires:       ood-util = 4
+Requires:       ood-initializers = 7
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 3
+Requires:       ood-base-jupyter = 4
 Requires:       ood-cloud-storage-conf = 1
-Requires:       ood-course-jupyter = 3
+Requires:       ood-course-jupyter = 4
 Requires:       ood-csc-status = 3
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 4
-Requires:       ood-julia-jupyter = 3
+Requires:       ood-julia-jupyter = 4
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 1
-Requires:       ood-persistent-ssh = 2
+Requires:       ood-mlflow = 2
+Requires:       ood-persistent-ssh = 3
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 3
-Requires:       ood-vnc-util = 3
-Requires:       ood-vscode = 3
+Requires:       ood-tensorboard = 4
+Requires:       ood-vnc-util = 4
+Requires:       ood-vscode = 4
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -53,6 +53,17 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Dec 8 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Allow any reservation on all apps.
+- Limit job time to reservation length when using reservation.
+- Improve caching of reservations.
+- Show the status of reservations in apps.
+- Add support for node-specific reservations.
+- Make it possible to define reservation in course modules.
+- Fix error with some types of partitions.
+- Move remote validation to OOD RPMs.
+- Improve errors for TensorBoard and Jupyter for Courses forms.
+
 * Mon Oct 9 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Add MLflow.
 - Add Allas configuration tool.
