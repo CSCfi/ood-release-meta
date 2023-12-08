@@ -24,7 +24,7 @@ Requires:       ood-disk-quotas
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
-Requires:       ood-lumio-o-auth
+Requires:       ood-lumi-o-auth
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
