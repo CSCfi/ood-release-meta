@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,12 +13,12 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 4
-Requires:       ood-initializers = 7
+Requires:       ood-initializers = 8
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 4
 Requires:       ood-cloud-storage-conf = 1
-Requires:       ood-course-jupyter = 4
+Requires:       ood-course-jupyter = 5
 Requires:       ood-csc-status = 3
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 4
@@ -53,6 +53,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Tue Dec 12 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix reservation handling in Jupyter for Courses form.
+
 * Fri Dec 8 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Allow any reservation on all apps.
 - Limit job time to reservation length when using reservation.
