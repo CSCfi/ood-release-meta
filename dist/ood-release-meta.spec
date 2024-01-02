@@ -25,6 +25,7 @@ Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
 Requires:       ood-lumi-o-auth
+Requires:       ood-lumi-o-tools
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
