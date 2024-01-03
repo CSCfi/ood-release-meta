@@ -47,7 +47,7 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
-* Wed Jan 3 2023 Robin Karlsson <robin.karlsson@csc.fi>
+* Wed Jan 3 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add ParaView 5.11.
 - Use default pytorch module version in Jupyter.
 - Allow any reservation on all apps.
