@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        1
-Release:        10%{?dist}
+Version:        2
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,19 +12,19 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 3
-Requires:       ood-initializers = 4
+Requires:       ood-util = 4
+Requires:       ood-initializers = 5
 
-Requires:       ood-base-jupyter = 4
-Requires:       ood-course-jupyter = 2
+Requires:       ood-base-jupyter = 5
+Requires:       ood-course-jupyter = 3
 Requires:       ood-html = 7
-Requires:       ood-julia-jupyter = 2
+Requires:       ood-julia-jupyter = 3
 Requires:       ood-lustre-quota = 1
-Requires:       ood-persistent-ssh = 3
+Requires:       ood-persistent-ssh = 4
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 3
-Requires:       ood-vnc-util = 3
-Requires:       ood-vscode = 3
+Requires:       ood-tensorboard = 4
+Requires:       ood-vnc-util = 4
+Requires:       ood-vscode = 4
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -47,6 +47,17 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Jan 3 2023 Robin Karlsson <robin.karlsson@csc.fi>
+- Add ParaView 5.11.
+- Use default pytorch module version in Jupyter.
+- Allow any reservation on all apps.
+- Limit job time to reservation length when using reservation.
+- Improve caching of reservations.
+- Show the status of reservations in apps.
+- Add support for node-specific reservations.
+- Make it possible to define reservation in course modules.
+- Improve errors for TensorBoard and Jupyter for Courses forms.
+
 * Wed Nov 8 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Remove LUMI-D NVME option.
 - Remove VNC form settings header.
