@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -22,7 +22,7 @@ Requires:       ood-julia-jupyter = 3
 Requires:       ood-lustre-quota = 1
 Requires:       ood-persistent-ssh = 4
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 4
+Requires:       ood-tensorboard = 5
 Requires:       ood-vnc-util = 4
 Requires:       ood-vscode = 4
 
@@ -47,6 +47,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Jan 4 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Make TensorBoard use default module version.
+
 * Wed Jan 3 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add ParaView 5.11.
 - Use default pytorch module version in Jupyter.
