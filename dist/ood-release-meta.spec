@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,7 +12,7 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 4
+Requires:       ood-util = 5
 Requires:       ood-initializers = 5
 
 Requires:       ood-base-jupyter = 5
@@ -47,6 +47,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Jan 5 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix form validation with missing reservations.
+
 * Thu Jan 4 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Make TensorBoard use default module version.
 
