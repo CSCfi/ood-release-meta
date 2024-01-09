@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,7 +12,7 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 4
+Requires:       ood-util = 5
 Requires:       ood-initializers = 8
 
 Requires:       ood-allas-conf = 1
@@ -53,6 +53,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Tue Jan 9 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix form validation when no reservation exists.
+
 * Tue Dec 12 2023 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix reservation handling in Jupyter for Courses form.
 
