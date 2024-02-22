@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        3
-Release:        3%{?dist}
+Version:        4
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,25 +12,25 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 5
-Requires:       ood-initializers = 8
+Requires:       ood-util = 6
+Requires:       ood-initializers = 9
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 4
+Requires:       ood-base-jupyter = 5
 Requires:       ood-cloud-storage-conf = 1
-Requires:       ood-course-jupyter = 5
-Requires:       ood-csc-status = 3
+Requires:       ood-course-jupyter = 6
+Requires:       ood-csc-status = 4
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 4
-Requires:       ood-julia-jupyter = 4
+Requires:       ood-html = 5
+Requires:       ood-julia-jupyter = 5
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 2
-Requires:       ood-persistent-ssh = 3
+Requires:       ood-mlflow = 3
+Requires:       ood-persistent-ssh = 4
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 4
-Requires:       ood-vnc-util = 4
-Requires:       ood-vscode = 4
+Requires:       ood-vnc-util = 5
+Requires:       ood-vscode = 5
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -53,6 +53,14 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Feb 22 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Make OOD 3.1 work.
+- Add GPU partitions (MIG) to apps.
+- Desktop uses srun instead of SSH.
+- Add desktop app categories.
+- Update VSCode to 1.86.1.
+- Reduce reservation buffer time 5 minutes.
+
 * Tue Jan 9 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix form validation when no reservation exists.
 
