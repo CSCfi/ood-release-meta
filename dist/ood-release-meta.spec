@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        1
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -20,6 +20,7 @@ Requires:       ood-course-jupyter
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
+Requires:       ood-matlab-html
 Requires:       ood-persistent-ssh
 Requires:       ood-shell
 Requires:       ood-tensorboard
