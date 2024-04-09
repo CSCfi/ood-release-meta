@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        2
-Release:        3%{?dist}
+Version:        3
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,19 +12,20 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 5
-Requires:       ood-initializers = 5
+Requires:       ood-util = 6
+Requires:       ood-initializers = 6
 
-Requires:       ood-base-jupyter = 5
-Requires:       ood-course-jupyter = 3
-Requires:       ood-html = 7
-Requires:       ood-julia-jupyter = 3
+Requires:       ood-base-jupyter = 6
+Requires:       ood-course-jupyter = 4
+Requires:       ood-html = 8
+Requires:       ood-julia-jupyter = 4
 Requires:       ood-lustre-quota = 1
-Requires:       ood-persistent-ssh = 4
+Requires:       ood-matlab-html = 1
+Requires:       ood-persistent-ssh = 5
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 5
-Requires:       ood-vnc-util = 4
-Requires:       ood-vscode = 4
+Requires:       ood-tensorboard = 6
+Requires:       ood-vnc-util = 5
+Requires:       ood-vscode = 5
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -47,6 +48,17 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Tue Apr 9 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add MATLAB HTML and Desktop version.
+- Add VisIt.
+- Strip SLURM env vars in Desktop terminal.
+- Keep Desktop terminal open on errors.
+- Enable remote files again.
+- Fix accessibility issues.
+- Update accessibility statement.
+- Add OIDC error pages.
+- Fix GPU reservations in apps.
+
 * Fri Jan 5 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix form validation with missing reservations.
 
