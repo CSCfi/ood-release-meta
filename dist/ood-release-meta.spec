@@ -21,6 +21,7 @@ Requires:       ood-cloud-storage-conf
 Requires:       ood-course-jupyter
 Requires:       ood-csc-status
 Requires:       ood-disk-quotas
+Requires:       ood-docs-gpt
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lustre-quota
