@@ -16,9 +16,11 @@ Requires:       ood-util
 Requires:       ood-initializers
 
 Requires:       ood-base-jupyter
+Requires:       ood-cloud-storage-conf
 Requires:       ood-course-jupyter
 Requires:       ood-html
 Requires:       ood-julia-jupyter
+Requires:       ood-lumi-o-auth
 Requires:       ood-lustre-quota
 Requires:       ood-matlab-html
 Requires:       ood-persistent-ssh
