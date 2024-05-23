@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        3
+Version:        4
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,12 +13,15 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 6
-Requires:       ood-initializers = 6
+Requires:       ood-initializers = 7
 
 Requires:       ood-base-jupyter = 6
+Requires:       ood-cloud-storage-conf = 2
 Requires:       ood-course-jupyter = 4
-Requires:       ood-html = 8
+Requires:       ood-html = 9
 Requires:       ood-julia-jupyter = 4
+Requires:       ood-lumi-o-auth = 1
+Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-matlab-html = 1
 Requires:       ood-persistent-ssh = 5
@@ -48,6 +51,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu May 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add Cloud Storage Configuration tool with LUMI-O and Allas integration
+- Add MATLAB and Cloud Storage Configuration to pinned apps
+- Clarify 502 error page links
+
 * Tue Apr 9 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add MATLAB HTML and Desktop version.
 - Add VisIt.
