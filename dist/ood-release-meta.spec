@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        5
+Version:        6
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,16 +13,18 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 7
-Requires:       ood-initializers = 10
+Requires:       ood-initializers = 11
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 6
-Requires:       ood-cloud-storage-conf = 1
+Requires:       ood-cloud-storage-conf = 2
 Requires:       ood-course-jupyter = 7
 Requires:       ood-csc-status = 5
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 6
+Requires:       ood-html = 7
 Requires:       ood-julia-jupyter = 6
+Requires:       ood-lumi-o-auth = 1
+Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-mlflow = 5
 Requires:       ood-persistent-ssh = 5
@@ -53,6 +55,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu May 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add LUMI-O to Cloud Storage Configuration tool.
+- Clarify 502 error page links
+
 * Mon Apr 8 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Improve accessibility.
 - Improve error pages.
