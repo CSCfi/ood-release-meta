@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -16,7 +16,7 @@ Requires:       ood-util = 6
 Requires:       ood-initializers = 7
 
 Requires:       ood-base-jupyter = 6
-Requires:       ood-cloud-storage-conf = 2
+Requires:       ood-cloud-storage-conf = 3
 Requires:       ood-course-jupyter = 4
 Requires:       ood-html = 9
 Requires:       ood-julia-jupyter = 4
@@ -51,6 +51,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 24 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Improve Cloud Storage Configuration revokation message.
+
 * Thu May 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add Cloud Storage Configuration tool with LUMI-O and Allas integration
 - Add MATLAB and Cloud Storage Configuration to pinned apps
