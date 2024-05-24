@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -17,7 +17,7 @@ Requires:       ood-initializers = 11
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 6
-Requires:       ood-cloud-storage-conf = 2
+Requires:       ood-cloud-storage-conf = 3
 Requires:       ood-course-jupyter = 7
 Requires:       ood-csc-status = 5
 Requires:       ood-disk-quotas = 1
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 24 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Improve Cloud Storage Configuration revokation message.
+
 * Thu May 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add LUMI-O to Cloud Storage Configuration tool.
 - Clarify 502 error page links
