@@ -55,7 +55,7 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
-% Mon Jun 10 2024 Robin Karlsson <robin.karlsson@csc.fi>
+* Mon Jun 10 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Update Visual Studio Code to 1.89.1.
 - Make Jupyter app always install Jupyter kernels for virtual environments.
 - Fix issues with some containerized applications in Desktop app.
