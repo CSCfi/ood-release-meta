@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        4
-Release:        2%{?dist}
+Version:        5
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -15,20 +15,20 @@ Requires:       ondemand
 Requires:       ood-util = 6
 Requires:       ood-initializers = 7
 
-Requires:       ood-base-jupyter = 6
-Requires:       ood-cloud-storage-conf = 3
-Requires:       ood-course-jupyter = 4
+Requires:       ood-base-jupyter = 7
+Requires:       ood-cloud-storage-conf = 4
+Requires:       ood-course-jupyter = 5
 Requires:       ood-html = 9
-Requires:       ood-julia-jupyter = 4
+Requires:       ood-julia-jupyter = 5
 Requires:       ood-lumi-o-auth = 1
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-matlab-html = 1
+Requires:       ood-matlab-html = 2
 Requires:       ood-persistent-ssh = 5
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 6
-Requires:       ood-vnc-util = 5
-Requires:       ood-vscode = 5
+Requires:       ood-tensorboard = 7
+Requires:       ood-vnc-util = 6
+Requires:       ood-vscode = 6
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -51,6 +51,12 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Jun 14 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Update Visual Studio Code to 1.89.1.
+- Add q_industry partition.
+- Make Jupyter app always install Jupyter kernels for virtual environments.
+- Clarify LUMI-O token lifetime and refreshing.
+
 * Fri May 24 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Improve Cloud Storage Configuration revokation message.
 
