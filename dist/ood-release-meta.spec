@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 6
-Requires:       ood-initializers = 7
+Requires:       ood-initializers = 8
 
 Requires:       ood-base-jupyter = 7
 Requires:       ood-cloud-storage-conf = 4
@@ -22,7 +22,7 @@ Requires:       ood-html = 9
 Requires:       ood-julia-jupyter = 5
 Requires:       ood-lumi-o-auth = 1
 Requires:       ood-lumi-o-tools = 1
-Requires:       ood-lustre-quota = 1
+Requires:       ood-lustre-quota = 2
 Requires:       ood-matlab-html = 2
 Requires:       ood-persistent-ssh = 5
 Requires:       ood-shell = 1
@@ -51,6 +51,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Jul 17 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add env var for enabling/disabling flash.
+
 * Fri Jun 14 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Update Visual Studio Code to 1.89.1.
 - Add q_industry partition.
