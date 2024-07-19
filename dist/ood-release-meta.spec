@@ -28,6 +28,7 @@ Requires:       ood-shell
 Requires:       ood-tensorboard
 Requires:       ood-vnc-util
 Requires:       ood-vscode
+Requires:       ood-csc-status
 
 # Disable debuginfo
 %global debug_package %{nil}
