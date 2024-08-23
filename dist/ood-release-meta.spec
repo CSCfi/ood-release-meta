@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        7
+Version:        8
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -12,27 +12,27 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 7
-Requires:       ood-initializers = 12
+Requires:       ood-util = 8
+Requires:       ood-initializers = 13
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 7
+Requires:       ood-base-jupyter = 8
 Requires:       ood-cloud-storage-conf = 4
-Requires:       ood-course-jupyter = 8
+Requires:       ood-course-jupyter = 9
 Requires:       ood-csc-status = 5
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 8
-Requires:       ood-julia-jupyter = 6
+Requires:       ood-html = 9
+Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 1
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 5
-Requires:       ood-persistent-ssh = 5
+Requires:       ood-mlflow = 6
+Requires:       ood-persistent-ssh = 6
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 6
-Requires:       ood-vnc-util = 8
-Requires:       ood-vscode = 7
+Requires:       ood-tensorboard = 7
+Requires:       ood-vnc-util = 9
+Requires:       ood-vscode = 8
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +55,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Aug 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add module JSON parsing.
+- Rework Jupyter app form significantly.
+- Support multiple compute node shells on the same node.
+- Use new Matomo URL.
+- Don't propagate resource limits to compute nodes (--propagate=NONE).
+
 * Mon Jun 10 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Update Visual Studio Code to 1.89.1.
 - Make Jupyter app always install Jupyter kernels for virtual environments.
