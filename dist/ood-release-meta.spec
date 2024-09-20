@@ -23,6 +23,7 @@ Requires:       ood-julia-jupyter
 Requires:       ood-lumi-o-auth
 Requires:       ood-lustre-quota
 Requires:       ood-matlab-html
+Requires:       ood-openfoam
 Requires:       ood-persistent-ssh
 Requires:       ood-shell
 Requires:       ood-tensorboard
