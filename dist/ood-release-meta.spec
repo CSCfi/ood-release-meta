@@ -16,6 +16,7 @@ Requires:       ood-util
 Requires:       ood-initializers
 
 Requires:       ood-base-jupyter
+Requires:       ood-csc-projects-lumi
 Requires:       ood-cloud-storage-conf
 Requires:       ood-course-jupyter
 Requires:       ood-html
