@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        6
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -31,7 +31,7 @@ Requires:       ood-openfoam = 1
 Requires:       ood-persistent-ssh = 6
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 8
-Requires:       ood-vnc-util = 7
+Requires:       ood-vnc-util = 8
 Requires:       ood-vscode = 7
 
 # Disable debuginfo
@@ -55,6 +55,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Show all partitions on VNC apps.
+- Fix cache reset button on VNC apps.
+
 * Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix help bar missing.
 
