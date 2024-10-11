@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        6
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 7
-Requires:       ood-initializers = 10
+Requires:       ood-initializers = 11
 
 Requires:       ood-base-jupyter = 8
 Requires:       ood-cloud-storage-conf = 5
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix help bar missing.
+
 * Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix industry dashboard always being enabled.
 
