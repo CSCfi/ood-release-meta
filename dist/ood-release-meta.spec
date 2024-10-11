@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        5
-Release:        2%{?dist}
+Version:        6
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,23 +12,27 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 6
-Requires:       ood-initializers = 8
+Requires:       ood-util = 7
+Requires:       ood-initializers = 9
 
-Requires:       ood-base-jupyter = 7
-Requires:       ood-cloud-storage-conf = 4
-Requires:       ood-course-jupyter = 5
-Requires:       ood-html = 9
-Requires:       ood-julia-jupyter = 5
+Requires:       ood-base-jupyter = 8
+Requires:       ood-cloud-storage-conf = 5
+Requires:       ood-course-jupyter = 6
+Requires:       ood-csc-projects-lumi = 3
+Requires:       ood-csc-status = 5
+Requires:       ood-html = 10
+Requires:       ood-julia-jupyter = 6
 Requires:       ood-lumi-o-auth = 1
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
-Requires:       ood-matlab-html = 2
-Requires:       ood-persistent-ssh = 5
+Requires:       ood-matlab-html = 3
+Requires:       ood-mlflow = 3
+Requires:       ood-openfoam = 1
+Requires:       ood-persistent-ssh = 6
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 7
-Requires:       ood-vnc-util = 6
-Requires:       ood-vscode = 6
+Requires:       ood-tensorboard = 8
+Requires:       ood-vnc-util = 7
+Requires:       ood-vscode = 7
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -51,6 +55,22 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Add MLflow interactive app.
+- Add industry dashboard for some projects.
+- Add OpenFOAM "interactive" app (industry dashboard only).
+- Add shortcuts to Desktop apps (industry dashboard only).
+- Update Visual Studio Code to 1.92.2.
+- Add project names to app forms.
+- Support multiple compute node shells on the same node.
+- Add terminal titles to compute node shells.
+- Add disk quota and project viewer.
+- Add option for using multiple GPUs in interactive apps.
+- Set --propagate=NONE for all interactive apps.
+- Make Desktop environment more robust. Only export some specific env vars.
+- Make Desktop apps possible to run on CPU nodes.
+- Use new Matomo URLs.
+
 * Wed Jul 17 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add env var for enabling/disabling flash.
 
