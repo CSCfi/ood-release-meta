@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        6
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -16,7 +16,7 @@ Requires:       ood-util = 7
 Requires:       ood-initializers = 11
 
 Requires:       ood-base-jupyter = 8
-Requires:       ood-cloud-storage-conf = 5
+Requires:       ood-cloud-storage-conf = 6
 Requires:       ood-course-jupyter = 6
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 5
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Oct 14 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix Allas Swift token creation not working.
+
 * Fri Oct 11 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Show all partitions on VNC apps.
 - Fix cache reset button on VNC apps.
