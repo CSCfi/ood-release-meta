@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        8
+Version:        9
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 8
-Requires:       ood-initializers = 13
+Requires:       ood-initializers = 14
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 8
@@ -26,12 +26,12 @@ Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 1
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 6
+Requires:       ood-mlflow = 7
 Requires:       ood-persistent-ssh = 6
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 7
-Requires:       ood-vnc-util = 9
+Requires:       ood-tensorboard = 8
+Requires:       ood-vnc-util = 10
 Requires:       ood-vscode = 8
 
 # Disable debuginfo
@@ -55,6 +55,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 18 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix Desktop app, MLflow and TensorBoard with newer Apptainer (1.3.4).
+- Fix MyCSC URL.
+
 * Fri Aug 23 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Add module JSON parsing.
 - Rework Jupyter app form significantly.
