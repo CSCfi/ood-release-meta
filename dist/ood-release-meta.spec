@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        6
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,12 +12,12 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 7
+Requires:       ood-util = 8
 Requires:       ood-initializers = 11
 
 Requires:       ood-base-jupyter = 8
 Requires:       ood-cloud-storage-conf = 6
-Requires:       ood-course-jupyter = 6
+Requires:       ood-course-jupyter = 7
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 5
 Requires:       ood-html = 10
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Nov 1 2024 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix bugs with GPU field in Jupyter for Courses.
+
 * Mon Oct 14 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix Allas Swift token creation not working.
 
