@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        6
-Release:        6%{?dist}
+Version:        7
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -15,23 +15,23 @@ Requires:       ondemand
 Requires:       ood-util = 8
 Requires:       ood-initializers = 11
 
-Requires:       ood-base-jupyter = 8
+Requires:       ood-base-jupyter = 9
 Requires:       ood-cloud-storage-conf = 6
 Requires:       ood-course-jupyter = 7
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 5
-Requires:       ood-html = 10
+Requires:       ood-html = 11
 Requires:       ood-julia-jupyter = 6
-Requires:       ood-lumi-o-auth = 1
+Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
 Requires:       ood-matlab-html = 3
 Requires:       ood-mlflow = 3
 Requires:       ood-openfoam = 1
-Requires:       ood-persistent-ssh = 6
+Requires:       ood-persistent-ssh = 7
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 8
-Requires:       ood-vnc-util = 8
+Requires:       ood-vnc-util = 9
 Requires:       ood-vscode = 7
 
 # Disable debuginfo
@@ -55,6 +55,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Jan 13 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Update accessibility statement contact info.
+- Add geoconda to Jupyter.
+- Disable password auth for shell, add retries.
+- Add GIS applications to VNC.
+- Fix lumi-o-auth excessive logging.
+
 * Fri Nov 1 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix bugs with GPU field in Jupyter for Courses.
 
