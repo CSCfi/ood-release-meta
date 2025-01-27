@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        9
+Version:        10
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -17,21 +17,21 @@ Requires:       ood-initializers = 14
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 8
-Requires:       ood-cloud-storage-conf = 4
+Requires:       ood-cloud-storage-conf = 5
 Requires:       ood-course-jupyter = 9
 Requires:       ood-csc-status = 5
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 9
+Requires:       ood-html = 10
 Requires:       ood-julia-jupyter = 7
-Requires:       ood-lumi-o-auth = 1
+Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 7
+Requires:       ood-mlflow = 8
 Requires:       ood-persistent-ssh = 6
 Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 8
-Requires:       ood-vnc-util = 10
+Requires:       ood-vnc-util = 11
 Requires:       ood-vscode = 8
 
 # Disable debuginfo
@@ -55,6 +55,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Jan 27 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Update accessibility statement.
+- Fix NVME issue in MLflow.
+- Fix excess logging in ood-lumi-o-auth.
+
 * Fri Oct 18 2024 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix Desktop app, MLflow and TensorBoard with newer Apptainer (1.3.4).
 - Fix MyCSC URL.
