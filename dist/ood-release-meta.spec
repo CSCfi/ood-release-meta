@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        10
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -32,7 +32,7 @@ Requires:       ood-quota-generator = 1
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 8
 Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 8
+Requires:       ood-vscode = 9
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Jan 29 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Update VSCode to 1.96.4.
+
 * Mon Jan 27 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Update accessibility statement.
 - Fix NVME issue in MLflow.
