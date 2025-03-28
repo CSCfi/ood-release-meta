@@ -31,6 +31,7 @@ Requires:       ood-lumi-o-tools
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
+Requires:       ood-rstudio
 Requires:       ood-shell
 Requires:       ood-tensorboard
 Requires:       ood-vnc-util
