@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        10
-Release:        2%{?dist}
+Version:        11
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,27 +12,28 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 8
-Requires:       ood-initializers = 14
+Requires:       ood-util = 9
+Requires:       ood-initializers = 15
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 8
-Requires:       ood-cloud-storage-conf = 5
-Requires:       ood-course-jupyter = 9
-Requires:       ood-csc-status = 5
+Requires:       ood-base-jupyter = 9
+Requires:       ood-cloud-storage-conf = 6
+Requires:       ood-course-jupyter = 10
+Requires:       ood-csc-status = 6
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 10
-Requires:       ood-julia-jupyter = 7
+Requires:       ood-julia-jupyter = 8
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 8
-Requires:       ood-persistent-ssh = 6
+Requires:       ood-mlflow = 9
+Requires:       ood-persistent-ssh = 7
 Requires:       ood-quota-generator = 1
+Requires:       ood-rstudio = 5
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 8
-Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 9
+Requires:       ood-tensorboard = 9
+Requires:       ood-vnc-util = 12
+Requires:       ood-vscode = 10
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +56,15 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Mar 31 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add RStudio.
+- Update VSCode to 1.98.2.
+- Add Python version selection to VSCode.
+- Enable saved settings for interactive apps.
+- Improve interactive app form labels and descriptions.
+- Ignore reservations with -no-ood in name.
+- Support OOD 4.0.
+
 * Wed Jan 29 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Update VSCode to 1.96.4.
 
