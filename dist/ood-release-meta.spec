@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        11
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,8 +12,8 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 10
-Requires:       ood-initializers = 15
+Requires:       ood-util = 11
+Requires:       ood-initializers = 16
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 9
@@ -56,6 +56,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Apr 4 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix saved settings behaviour.
+
 * Fri Apr 4 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix modal close button styling.
 - Use default julia-jupyter module.
