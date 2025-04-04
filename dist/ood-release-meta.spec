@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        11
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,28 +12,28 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 9
+Requires:       ood-util = 10
 Requires:       ood-initializers = 15
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 9
-Requires:       ood-cloud-storage-conf = 6
+Requires:       ood-cloud-storage-conf = 7
 Requires:       ood-course-jupyter = 10
 Requires:       ood-csc-status = 6
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 10
-Requires:       ood-julia-jupyter = 8
+Requires:       ood-julia-jupyter = 9
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-mlflow = 9
-Requires:       ood-persistent-ssh = 7
+Requires:       ood-persistent-ssh = 8
 Requires:       ood-quota-generator = 1
 Requires:       ood-rstudio = 5
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 9
 Requires:       ood-vnc-util = 12
-Requires:       ood-vscode = 10
+Requires:       ood-vscode = 11
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -56,6 +56,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Apr 4 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix modal close button styling.
+- Use default julia-jupyter module.
+- Default to using newest VSCode.
+
 * Mon Mar 31 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add RStudio.
 - Update VSCode to 1.98.2.
