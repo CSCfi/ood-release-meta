@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        11
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -21,7 +21,7 @@ Requires:       ood-cloud-storage-conf = 7
 Requires:       ood-course-jupyter = 10
 Requires:       ood-csc-status = 6
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 10
+Requires:       ood-html = 11
 Requires:       ood-julia-jupyter = 9
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
@@ -56,6 +56,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Tue Apr 15 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add MFA login page.
+
 * Fri Apr 4 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix saved settings behaviour.
 
