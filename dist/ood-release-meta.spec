@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -15,7 +15,7 @@ Requires:       ondemand
 Requires:       ood-util = 9
 Requires:       ood-initializers = 12
 
-Requires:       ood-base-jupyter = 10
+Requires:       ood-base-jupyter = 11
 Requires:       ood-cloud-storage-conf = 7
 Requires:       ood-course-jupyter = 8
 Requires:       ood-csc-projects-lumi = 3
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Apr 17 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix Jupyter script not working.
+
 * Wed Apr 16 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Update VSCode to 1.99.2.
 - Add better support for containers in Jupyter.
