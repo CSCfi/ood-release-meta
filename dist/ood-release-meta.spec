@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        11
-Release:        4%{?dist}
+Version:        12
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,28 +12,28 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 11
-Requires:       ood-initializers = 16
+Requires:       ood-util = 12
+Requires:       ood-initializers = 17
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 9
+Requires:       ood-base-jupyter = 10
 Requires:       ood-cloud-storage-conf = 7
-Requires:       ood-course-jupyter = 10
-Requires:       ood-csc-status = 6
+Requires:       ood-course-jupyter = 11
+Requires:       ood-csc-status = 7
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 11
-Requires:       ood-julia-jupyter = 9
+Requires:       ood-julia-jupyter = 10
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-mlflow = 9
-Requires:       ood-persistent-ssh = 8
+Requires:       ood-mlflow = 10
+Requires:       ood-persistent-ssh = 9
 Requires:       ood-quota-generator = 1
-Requires:       ood-rstudio = 5
+Requires:       ood-rstudio = 6
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 9
-Requires:       ood-vnc-util = 12
-Requires:       ood-vscode = 11
+Requires:       ood-tensorboard = 10
+Requires:       ood-vnc-util = 13
+Requires:       ood-vscode = 12
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -56,6 +56,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 2 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add email on start checkbox for all apps.
+- Limit max job length to 16h.
+- Use unique name for Jupyter kernels installed.
+- Set python.defaultInterpreterPath for VSCode.
+- Force host_terminal as CustomCommand for Desktop xfce4-terminal.
+
 * Tue Apr 15 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add MFA login page.
 
