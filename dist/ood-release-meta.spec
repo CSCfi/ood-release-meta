@@ -25,6 +25,7 @@ Requires:       ood-docs-gpt
 Requires:       ood-html
 Requires:       ood-job-monitor
 Requires:       ood-julia-jupyter
+Requires:       ood-lua-utils
 Requires:       ood-lustre-quota
 Requires:       ood-lumi-o-auth
 Requires:       ood-lumi-o-tools
