@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        12
+Version:        13
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,13 +13,13 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 12
-Requires:       ood-initializers = 17
+Requires:       ood-initializers = 18
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 10
-Requires:       ood-cloud-storage-conf = 7
+Requires:       ood-cloud-storage-conf = 8
 Requires:       ood-course-jupyter = 11
-Requires:       ood-csc-status = 7
+Requires:       ood-csc-status = 8
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 11
 Requires:       ood-julia-jupyter = 10
@@ -27,12 +27,12 @@ Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-mlflow = 10
-Requires:       ood-persistent-ssh = 9
+Requires:       ood-persistent-ssh = 10
 Requires:       ood-quota-generator = 1
 Requires:       ood-rstudio = 6
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 10
-Requires:       ood-vnc-util = 13
+Requires:       ood-tensorboard = 11
+Requires:       ood-vnc-util = 14
 Requires:       ood-vscode = 12
 
 # Disable debuginfo
@@ -56,6 +56,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Aug 14 2025 Robin Karlsson <robin.karlsson@csc.fi
+- Set Rclone default time to unix time 0.
+- Wait until TensorBoard launches before showing connect button.
+- Use config(noreplace) for Passenger app nginx config files.
+- Use module reset instead of module restore in Desktop.
+- Use global SSH config in shell apps.
+
 * Fri May 2 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add email on start checkbox for all apps.
 - Limit max job length to 16h.
