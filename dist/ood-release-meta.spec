@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        13
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -33,7 +33,7 @@ Requires:       ood-rstudio = 6
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 11
 Requires:       ood-vnc-util = 14
-Requires:       ood-vscode = 12
+Requires:       ood-vscode = 13
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -56,6 +56,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Aug 18 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix invalid JSON generated in VSCode.
+
 * Thu Aug 14 2025 Robin Karlsson <robin.karlsson@csc.fi
 - Set Rclone default time to unix time 0.
 - Wait until TensorBoard launches before showing connect button.
