@@ -29,6 +29,7 @@ Requires:       ood-lua-utils
 Requires:       ood-lustre-quota
 Requires:       ood-lumi-o-auth
 Requires:       ood-lumi-o-tools
+Requires:       ood-matlab-html
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
