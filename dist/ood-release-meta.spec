@@ -10,8 +10,6 @@ BuildArch:      noarch
 License:        MIT
 Source:         %{name}-%{version}.tar.bz2
 
-Obsoletes:      ood-matlab-html = 13
-Conflicts:      ood-matlab-html = 13
 Requires:       ondemand
 
 Requires:       ood-util
@@ -31,6 +29,7 @@ Requires:       ood-lua-utils
 Requires:       ood-lustre-quota
 Requires:       ood-lumi-o-auth
 Requires:       ood-lumi-o-tools
+Requires:       ood-matlab-html
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
