@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        8
-Release:        2%{?dist}
+Version:        9
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,13 +13,13 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 9
-Requires:       ood-initializers = 12
+Requires:       ood-initializers = 13
 
-Requires:       ood-base-jupyter = 11
-Requires:       ood-cloud-storage-conf = 7
-Requires:       ood-course-jupyter = 8
+Requires:       ood-base-jupyter = 12
+Requires:       ood-cloud-storage-conf = 8
+Requires:       ood-course-jupyter = 9
 Requires:       ood-csc-projects-lumi = 3
-Requires:       ood-csc-status = 6
+Requires:       ood-csc-status = 7
 Requires:       ood-html = 11
 Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 2
@@ -28,10 +28,10 @@ Requires:       ood-lustre-quota = 2
 Requires:       ood-matlab-html = 4
 Requires:       ood-mlflow = 4
 Requires:       ood-openfoam = 1
-Requires:       ood-persistent-ssh = 8
+Requires:       ood-persistent-ssh = 9
 Requires:       ood-shell = 1
-Requires:       ood-tensorboard = 9
-Requires:       ood-vnc-util = 10
+Requires:       ood-tensorboard = 10
+Requires:       ood-vnc-util = 11
 Requires:       ood-vscode = 8
 
 # Disable debuginfo
@@ -55,6 +55,17 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Aug 29 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add support for Jupyter for Courses modules under /appl/local/csc/modulefiles/www_lumi_modules.
+- Set Rclone default time to unix time 0.
+- Wait until TensorBoard fully launches before allowing connections.
+- Remove %post RPM section from Passenger apps.
+- Fix a bug with Jupyter advanced settings and custom module.
+- Use an unique name for Jupyter kernels.
+- Force global SSH config to be used for shell apps.
+- Use module reset instead of restore in Desktop.
+- Launch Desktop terminal tabs outside of container.
+
 * Thu Apr 17 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix Jupyter script not working.
 
