@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        14
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 12
-Requires:       ood-initializers = 19
+Requires:       ood-initializers = 20
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 10
@@ -26,7 +26,7 @@ Requires:       ood-julia-jupyter = 10
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-matlab-html = 8
+Requires:       ood-matlab-html = 9
 Requires:       ood-mlflow = 10
 Requires:       ood-persistent-ssh = 10
 Requires:       ood-quota-generator = 2
@@ -57,6 +57,10 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Oct 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Remove incorrect MATLAB version text.
+- Change pinned apps to 5 per row instead of 7.
+
 * Wed Oct 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add support for new BU types in ood-csc-status and dashboard notifications.
 - Use user-auth MFA discovery service instead of own login method selection page.
