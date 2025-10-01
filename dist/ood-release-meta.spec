@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        13
-Release:        2%{?dist}
+Version:        14
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,27 +13,28 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 12
-Requires:       ood-initializers = 18
+Requires:       ood-initializers = 19
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 10
 Requires:       ood-cloud-storage-conf = 8
 Requires:       ood-course-jupyter = 11
-Requires:       ood-csc-status = 8
+Requires:       ood-csc-status = 11
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 11
+Requires:       ood-html = 12
 Requires:       ood-julia-jupyter = 10
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
+Requires:       ood-matlab-html = 8
 Requires:       ood-mlflow = 10
 Requires:       ood-persistent-ssh = 10
-Requires:       ood-quota-generator = 1
+Requires:       ood-quota-generator = 2
 Requires:       ood-rstudio = 6
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 11
-Requires:       ood-vnc-util = 14
-Requires:       ood-vscode = 13
+Requires:       ood-vnc-util = 15
+Requires:       ood-vscode = 14
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -56,6 +57,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Oct 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add support for new BU types in ood-csc-status and dashboard notifications.
+- Use user-auth MFA discovery service instead of own login method selection page.
+- Add MATLAB.
+- Update VSCode to 1.104.1.
+- Update TurboVNC to 3.2.
+
 * Mon Aug 18 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix invalid JSON generated in VSCode.
 
