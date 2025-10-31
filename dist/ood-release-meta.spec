@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        9
+Version:        10
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -25,7 +25,7 @@ Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
-Requires:       ood-matlab-html = 4
+Requires:       ood-matlab-html = 5
 Requires:       ood-mlflow = 4
 Requires:       ood-openfoam = 1
 Requires:       ood-persistent-ssh = 9
@@ -55,6 +55,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Oct 31 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Add bring-your-own-license to MATLAB.
+- Add small partition to MATLAB.
+- Increase default memory to MATLAB.
+
 * Fri Aug 29 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add support for Jupyter for Courses modules under /appl/local/csc/modulefiles/www_lumi_modules.
 - Set Rclone default time to unix time 0.
