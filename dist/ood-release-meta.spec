@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        14
-Release:        2%{?dist}
+Version:        15
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,20 +13,20 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 12
-Requires:       ood-initializers = 20
+Requires:       ood-initializers = 21
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 10
-Requires:       ood-cloud-storage-conf = 8
+Requires:       ood-cloud-storage-conf = 9
 Requires:       ood-course-jupyter = 11
 Requires:       ood-csc-status = 11
 Requires:       ood-disk-quotas = 1
-Requires:       ood-html = 12
+Requires:       ood-html = 13
 Requires:       ood-julia-jupyter = 10
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-matlab-html = 9
+Requires:       ood-matlab-html = 10
 Requires:       ood-mlflow = 10
 Requires:       ood-persistent-ssh = 10
 Requires:       ood-quota-generator = 2
@@ -57,6 +57,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Dec 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix sensitive URLs and titles being logged to Matomo.
+- Fetch Swift storage URL from Allas dynamically.
+- Increase MATLAB default memory to 8GB or 4 cores.
+
 * Wed Oct 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Remove incorrect MATLAB version text.
 - Change pinned apps to 5 per row instead of 7.
