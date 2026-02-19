@@ -33,6 +33,7 @@ Requires:       ood-matlab-html
 Requires:       ood-mlflow
 Requires:       ood-persistent-ssh
 Requires:       ood-quota-generator
+Requires:       ood-r-jupyter
 Requires:       ood-rstudio
 Requires:       ood-shell
 Requires:       ood-tensorboard
