@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        10
+Version:        11
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,26 +13,26 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 9
-Requires:       ood-initializers = 13
+Requires:       ood-initializers = 14
 
-Requires:       ood-base-jupyter = 12
-Requires:       ood-cloud-storage-conf = 8
+Requires:       ood-base-jupyter = 13
+Requires:       ood-cloud-storage-conf = 10
 Requires:       ood-course-jupyter = 9
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 7
-Requires:       ood-html = 11
+Requires:       ood-html = 12
 Requires:       ood-julia-jupyter = 7
-Requires:       ood-lumi-o-auth = 2
+Requires:       ood-lumi-o-auth = 3
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
 Requires:       ood-matlab-html = 5
-Requires:       ood-mlflow = 4
+Requires:       ood-mlflow = 5
 Requires:       ood-openfoam = 1
-Requires:       ood-persistent-ssh = 9
+Requires:       ood-persistent-ssh = 10
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 10
 Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 8
+Requires:       ood-vscode = 9
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +55,16 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Feb 27 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Fix Compute node shell persistency.
+- Update VSCode 1.109.2.
+- Support newer MLflow versions.
+- Add configurable expiration date for LUMI-O tokens.
+- Fix sensitive URLs and titles being logged to Matomo.
+- Fetch Swift storage URL from Allas dynamically.
+- Increase CPU limit to 12 for Compute node shell.
+- Update cray-python versions in Jupyter.
+
 * Fri Oct 31 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Add bring-your-own-license to MATLAB.
 - Add small partition to MATLAB.
