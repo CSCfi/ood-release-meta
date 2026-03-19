@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        15
+Version:        16
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -27,14 +27,15 @@ Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-matlab-html = 10
-Requires:       ood-mlflow = 10
-Requires:       ood-persistent-ssh = 10
+Requires:       ood-mlflow = 11
+Requires:       ood-persistent-ssh = 11
 Requires:       ood-quota-generator = 2
+Requires:       ood-r-jupyter = 2
 Requires:       ood-rstudio = 6
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 11
 Requires:       ood-vnc-util = 15
-Requires:       ood-vscode = 14
+Requires:       ood-vscode = 15
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -57,6 +58,12 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Thu Mar 19 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Add R-Jupyter.
+- Update VSCode to 1.111.0.
+- Support newer MLflow versions (pytorch/2.9).
+- Increase CPU limit to 12 for Compute node shell.
+
 * Mon Dec 1 2025 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix sensitive URLs and titles being logged to Matomo.
 - Fetch Swift storage URL from Allas dynamically.
