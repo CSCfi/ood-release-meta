@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        16
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -28,7 +28,7 @@ Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
 Requires:       ood-matlab-html = 10
 Requires:       ood-mlflow = 11
-Requires:       ood-persistent-ssh = 11
+Requires:       ood-persistent-ssh = 12
 Requires:       ood-quota-generator = 2
 Requires:       ood-r-jupyter = 2
 Requires:       ood-rstudio = 6
@@ -58,6 +58,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Mon Mar 23 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Use correct version of Compute node shell for CPU limit increase.
+
 * Thu Mar 19 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Add R-Jupyter.
 - Update VSCode to 1.111.0.
