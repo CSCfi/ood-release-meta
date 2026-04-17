@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -17,7 +17,7 @@ Requires:       ood-initializers = 14
 
 Requires:       ood-base-jupyter = 14
 Requires:       ood-cloud-storage-conf = 10
-Requires:       ood-course-jupyter = 9
+Requires:       ood-course-jupyter = 10
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 7
 Requires:       ood-html = 13
@@ -55,6 +55,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Apr 17 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Load wget module for Jupyter for Courses.
+
 * Fri Apr 17 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Use MLflow 3.11.1 and 2.22.0 from /appl/local/ood.
 - Update VSCode to 1.115.0.
