@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        11
+Version:        12
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -15,24 +15,24 @@ Requires:       ondemand
 Requires:       ood-util = 9
 Requires:       ood-initializers = 14
 
-Requires:       ood-base-jupyter = 13
+Requires:       ood-base-jupyter = 14
 Requires:       ood-cloud-storage-conf = 10
 Requires:       ood-course-jupyter = 9
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 7
-Requires:       ood-html = 12
+Requires:       ood-html = 13
 Requires:       ood-julia-jupyter = 7
-Requires:       ood-lumi-o-auth = 3
+Requires:       ood-lumi-o-auth = 4
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
 Requires:       ood-matlab-html = 5
-Requires:       ood-mlflow = 5
+Requires:       ood-mlflow = 6
 Requires:       ood-openfoam = 1
 Requires:       ood-persistent-ssh = 10
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 10
 Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 9
+Requires:       ood-vscode = 10
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +55,12 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Apr 17 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Use MLflow 3.11.1 and 2.22.0 from /appl/local/ood.
+- Update VSCode to 1.115.0.
+- Add frontpage links to LUMI-K and LUMI-O.
+- Fix app forms styling for 4.1.
+
 * Fri Feb 27 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Fix Compute node shell persistency.
 - Update VSCode 1.109.2.
