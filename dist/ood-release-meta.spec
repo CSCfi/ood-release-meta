@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        16
-Release:        2%{?dist}
+Version:        17
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -16,9 +16,9 @@ Requires:       ood-util = 12
 Requires:       ood-initializers = 21
 
 Requires:       ood-allas-conf = 1
-Requires:       ood-base-jupyter = 10
+Requires:       ood-base-jupyter = 11
 Requires:       ood-cloud-storage-conf = 9
-Requires:       ood-course-jupyter = 11
+Requires:       ood-course-jupyter = 12
 Requires:       ood-csc-status = 11
 Requires:       ood-disk-quotas = 1
 Requires:       ood-html = 13
@@ -31,11 +31,11 @@ Requires:       ood-mlflow = 11
 Requires:       ood-persistent-ssh = 12
 Requires:       ood-quota-generator = 2
 Requires:       ood-r-jupyter = 2
-Requires:       ood-rstudio = 6
+Requires:       ood-rstudio = 7
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 11
 Requires:       ood-vnc-util = 15
-Requires:       ood-vscode = 15
+Requires:       ood-vscode = 16
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -58,6 +58,11 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 8 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Add option to reset Jupyter for Courses material.
+- Allow resuming last opened workspace in VSCode.
+- Update forms to support OOD 4.1.
+
 * Mon Mar 23 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Use correct version of Compute node shell for CPU limit increase.
 
