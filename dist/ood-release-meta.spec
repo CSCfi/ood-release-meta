@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        17
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -13,7 +13,7 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 12
-Requires:       ood-initializers = 21
+Requires:       ood-initializers = 22
 
 Requires:       ood-allas-conf = 1
 Requires:       ood-base-jupyter = 11
@@ -26,7 +26,7 @@ Requires:       ood-julia-jupyter = 10
 Requires:       ood-lumi-o-auth = 2
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 1
-Requires:       ood-matlab-html = 10
+Requires:       ood-matlab-html = 11
 Requires:       ood-mlflow = 11
 Requires:       ood-persistent-ssh = 12
 Requires:       ood-quota-generator = 2
@@ -58,6 +58,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Tue May 12 2026 Robin Karlsson <robin.karlsson@csc.fi
+- Add module version selection for MATLAB.
+
 * Fri May 8 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Add option to reset Jupyter for Courses material.
 - Allow resuming last opened workspace in VSCode.
