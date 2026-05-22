@@ -1,8 +1,8 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        12
-Release:        2%{?dist}
+Version:        13
+Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -12,12 +12,12 @@ Source:         %{name}-%{version}.tar.bz2
 
 Requires:       ondemand
 
-Requires:       ood-util = 9
-Requires:       ood-initializers = 14
+Requires:       ood-util = 11
+Requires:       ood-initializers = 15
 
-Requires:       ood-base-jupyter = 14
+Requires:       ood-base-jupyter = 15
 Requires:       ood-cloud-storage-conf = 10
-Requires:       ood-course-jupyter = 10
+Requires:       ood-course-jupyter = 11
 Requires:       ood-csc-projects-lumi = 3
 Requires:       ood-csc-status = 7
 Requires:       ood-html = 13
@@ -25,14 +25,14 @@ Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 4
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
-Requires:       ood-matlab-html = 5
+Requires:       ood-matlab-html = 6
 Requires:       ood-mlflow = 6
 Requires:       ood-openfoam = 1
 Requires:       ood-persistent-ssh = 10
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 10
 Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 10
+Requires:       ood-vscode = 11
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +55,13 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri May 22 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Add module version selection for Jupyter and MATLAB.
+- Add LAIF lumi-multitorch to Jupyter.
+- Add option to resume last VSCode session.
+- Add option to reset Jupyter for Courses course material.
+- Fix reset cache button missing in 4.1.
+
 * Fri Apr 17 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Load wget module for Jupyter for Courses.
 
