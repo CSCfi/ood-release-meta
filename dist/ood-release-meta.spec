@@ -1,7 +1,7 @@
 %define config_path /etc/ood/config
 
 Name:           ood-release-meta
-Version:        13
+Version:        14
 Release:        1%{?dist}
 Summary:        Open on Demand release meta package
 
@@ -13,9 +13,9 @@ Source:         %{name}-%{version}.tar.bz2
 Requires:       ondemand
 
 Requires:       ood-util = 11
-Requires:       ood-initializers = 15
+Requires:       ood-initializers = 17
 
-Requires:       ood-base-jupyter = 15
+Requires:       ood-base-jupyter = 17
 Requires:       ood-cloud-storage-conf = 10
 Requires:       ood-course-jupyter = 11
 Requires:       ood-csc-projects-lumi = 3
@@ -25,14 +25,15 @@ Requires:       ood-julia-jupyter = 7
 Requires:       ood-lumi-o-auth = 4
 Requires:       ood-lumi-o-tools = 1
 Requires:       ood-lustre-quota = 2
+Requires:       ood-marimo = 2
 Requires:       ood-matlab-html = 6
 Requires:       ood-mlflow = 6
 Requires:       ood-openfoam = 1
-Requires:       ood-persistent-ssh = 10
+Requires:       ood-persistent-ssh = 11
 Requires:       ood-shell = 1
 Requires:       ood-tensorboard = 10
 Requires:       ood-vnc-util = 11
-Requires:       ood-vscode = 11
+Requires:       ood-vscode = 12
 
 # Disable debuginfo
 %global debug_package %{nil}
@@ -55,6 +56,12 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Fri Aug 28 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Add marimo.
+- Update VSCode to 1.135.0.
+- Fix compute node shells not making all CPUs available.
+- Support OOD 4.2.
+
 * Fri May 22 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Add module version selection for Jupyter and MATLAB.
 - Add LAIF lumi-multitorch to Jupyter.
