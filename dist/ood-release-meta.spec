@@ -19,6 +19,7 @@ Requires:       ood-base-jupyter
 Requires:       ood-csc-projects-lumi
 Requires:       ood-cloud-storage-conf
 Requires:       ood-course-jupyter
+Requires:       ood-firecrest-auth
 Requires:       ood-html
 Requires:       ood-julia-jupyter
 Requires:       ood-lumi-o-auth
