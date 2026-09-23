@@ -2,7 +2,7 @@
 
 Name:           ood-release-meta
 Version:        14
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open on Demand release meta package
 
 BuildArch:      noarch
@@ -56,6 +56,9 @@ echo "%{version}" > %{buildroot}%{config_path}/CSC_OOD_RELEASE
 %{config_path}
 
 %changelog
+* Wed Sep 23 2026 Robin Karlsson <robin.karlsson@csc.fi>
+- Use new CI.
+
 * Fri Aug 28 2026 Robin Karlsson <robin.karlsson@csc.fi>
 - Add marimo.
 - Update VSCode to 1.135.0.
